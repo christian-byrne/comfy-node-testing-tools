@@ -17,6 +17,7 @@ from src.utils import folder_paths
 from src.view_results.results_webview import ComparisonGrid
 from src.utils.tensor_utils import TensorImgUtils
 
+from src.utils.logger import smart_print
 from src.tests.test_tensor_types import TensorTypesTest
 from src.constants import MAX_BRANCHES, TARGET_CUSTOM_NODES_DIR, TARGET_NODE_CLASS_NAME
 
@@ -32,20 +33,20 @@ class NodeTest:
         self.NODE_CLASS_MAPPINGS = {}
         self.NODE_DISPLAY_NAME_MAPPINGS = {}
         self.EXTENSION_WEB_DIRS = {}
-        print(f"Testing {self.node_name} node")
+        smart_print(f"Testing {self.node_name} node")
         success = self.load_custom_node()
-        print(f"Loading Success: {success}")
+        smart_print(f"Loading Success: {success}")
 
         self.target_node = {
             "class": self.NODE_CLASS_MAPPINGS[self.node_name],
             "instance": self.NODE_CLASS_MAPPINGS[self.node_name](),
             "input_types": self.NODE_CLASS_MAPPINGS[self.node_name].INPUT_TYPES(),
         }
-        print(f"Target Node Input Types: {self.target_node['input_types']}")
+        smart_print(f"Target Node Input Types: {self.target_node['input_types']}")
         self.target_node["tensor_input_fields"] = self.parse_tensor_input_fields(
             self.target_node["input_types"]
         )
-        print(
+        smart_print(
             f"Target Node Tensor Input Fields: {self.target_node['tensor_input_fields']}"
         )
 
@@ -53,8 +54,8 @@ class NodeTest:
             self.target_node["instance"],
             self.target_node["tensor_input_fields"],
             self.target_node["input_types"],
-            max_branches=self.max_branches,
         )
+        tensor_test.run(max_branches=self.max_branches)
 
     def parse_tensor_input_fields(self, INPUT_TYPES):
         """Parse the input types for the node

@@ -68,7 +68,7 @@ class ComparisonGrid:
             shutil.rmtree(self.results_dir)
         os.makedirs(self.results_dir, exist_ok=True)
 
-    def append_to_section_descripttion(self, section_name: str, description: str):
+    def append_to_section_description(self, section_name: str, description: str):
         if section_name not in self.sections:
             self.__log(f"Section {section_name} does not exist.")
             return

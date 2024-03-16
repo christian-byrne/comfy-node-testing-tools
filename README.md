@@ -25,3 +25,5 @@
 ![test suite webview demo gif](wiki/wiki-media/test-results-webview-gif2.gif)
 
 ![test suite webview screenshot](wiki/wiki-media/test-results-webview-picture.png)
+
+![test-results-webview-picture-tensor_types.png](wiki/wiki-media/test-results-webview-picture-tensor_types.png)

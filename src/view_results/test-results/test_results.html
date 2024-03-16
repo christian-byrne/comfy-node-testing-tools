@@ -33,190 +33,16 @@
         <div class="row m-1">
         
         <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
-          <div class="col-12">
-            <p class="h4">[BRANCH 1] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor</p>
-            <span class="text-muted">Random Inputs: {'size_matching_method': 'fill', 'invert_cutout': True}</span>
+          <div class="col-12 ps-2 mb-1 mt-4 pb-1">
+            <p class="h5">[BRANCH 1] image1: (H, W, RGB) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W, A) Tensor</p>
+            <span class="text-muted">Random Inputs: {'size_matching_method': 'crop_larger_topleft', 'invert_cutout': True}</span>
           </div>
           <div class="col-12 d-flex flex-row">
           
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-1.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">base_image</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
-                  RGBAHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([4, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-1.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 1] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-1.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-2.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">cutout</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
-                  RGBHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([3, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-2.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 1] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-2.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-3.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">cutout_alpha</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
-                  AHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([1, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-3.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 1] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-3.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-4.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">Output</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
-                  RGBHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([3, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-4.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 1] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-4.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          </div>
-        </div>
-        
-        <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
-          <div class="col-12">
-            <p class="h4">[BRANCH 2] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor</p>
-            <span class="text-muted">Random Inputs: {'size_matching_method': 'cover_crop', 'invert_cutout': True}</span>
-          </div>
-          <div class="col-12 d-flex flex-row">
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-1.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (H, W, RGB) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W, A) Tensor-1.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -242,13 +68,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-1.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (H, W, RGB) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W, A) Tensor-1.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 2] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-1.png</small>
+                <small class="text-muted">[BRANCH 1] image1: (H, W, RGB) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W, A) Tensor-1.png</small>
                 
               </div>
             </div>
@@ -257,7 +83,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-2.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (H, W, RGB) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W, A) Tensor-2.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -269,12 +95,12 @@
                 <p class="card-text">
                   <span class="text-muted">TENSOR TYPE&nbsp;</span>
 
-                  RGBAHW
+                  RGBHW
                 </p>
                 <p class="card-text">
                   <span class="text-muted">TENSOR SHAPE&nbsp;</span>
 
-                  torch.Size([4, 24, 34])
+                  torch.Size([3, 24, 34])
                 </p>
                 <p class="card-text">
                   <span class="text-muted">HEIGHT&nbsp;</span>
@@ -283,13 +109,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-2.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (H, W, RGB) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W, A) Tensor-2.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 2] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-2.png</small>
+                <small class="text-muted">[BRANCH 1] image1: (H, W, RGB) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W, A) Tensor-2.png</small>
                 
               </div>
             </div>
@@ -298,7 +124,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-3.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (H, W, RGB) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W, A) Tensor-3.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -324,13 +150,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-3.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (H, W, RGB) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W, A) Tensor-3.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 2] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-3.png</small>
+                <small class="text-muted">[BRANCH 1] image1: (H, W, RGB) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W, A) Tensor-3.png</small>
                 
               </div>
             </div>
@@ -339,7 +165,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-4.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (H, W, RGB) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W, A) Tensor-4.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -365,13 +191,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-4.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 1] image1: (H, W, RGB) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W, A) Tensor-4.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 2] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-4.png</small>
+                <small class="text-muted">[BRANCH 1] image1: (H, W, RGB) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W, A) Tensor-4.png</small>
                 
               </div>
             </div>
@@ -381,16 +207,16 @@
         </div>
         
         <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
-          <div class="col-12">
-            <p class="h4">[BRANCH 3] image1: (H, W, RGB) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor</p>
-            <span class="text-muted">Random Inputs: {'size_matching_method': 'fit_center', 'invert_cutout': True}</span>
+          <div class="col-12 ps-2 mb-1 mt-4 pb-1">
+            <p class="h5">[BRANCH 2] image1: (RGBA, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (A, H, W) Tensor</p>
+            <span class="text-muted">Random Inputs: {'size_matching_method': 'center_dont_resize', 'invert_cutout': False}</span>
           </div>
           <div class="col-12 d-flex flex-row">
           
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (H, W, RGB) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-1.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGBA, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (A, H, W) Tensor-1.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -402,47 +228,6 @@
                 <p class="card-text">
                   <span class="text-muted">TENSOR TYPE&nbsp;</span>
 
-                  RGBHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([3, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (H, W, RGB) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-1.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 3] image1: (H, W, RGB) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-1.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (H, W, RGB) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-2.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">cutout</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
                   RGBAHW
                 </p>
                 <p class="card-text">
@@ -457,13 +242,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (H, W, RGB) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-2.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGBA, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (A, H, W) Tensor-1.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 3] image1: (H, W, RGB) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-2.png</small>
+                <small class="text-muted">[BRANCH 2] image1: (RGBA, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (A, H, W) Tensor-1.png</small>
                 
               </div>
             </div>
@@ -472,7 +257,48 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (H, W, RGB) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-3.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGBA, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (A, H, W) Tensor-2.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">cutout</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  RGBHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([3, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGBA, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (A, H, W) Tensor-2.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 2] image1: (RGBA, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (A, H, W) Tensor-2.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGBA, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (A, H, W) Tensor-3.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -498,13 +324,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (H, W, RGB) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-3.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGBA, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (A, H, W) Tensor-3.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 3] image1: (H, W, RGB) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-3.png</small>
+                <small class="text-muted">[BRANCH 2] image1: (RGBA, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (A, H, W) Tensor-3.png</small>
                 
               </div>
             </div>
@@ -513,7 +339,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (H, W, RGB) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-4.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGBA, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (A, H, W) Tensor-4.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -539,13 +365,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (H, W, RGB) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-4.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 2] image1: (RGBA, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (A, H, W) Tensor-4.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 3] image1: (H, W, RGB) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-4.png</small>
+                <small class="text-muted">[BRANCH 2] image1: (RGBA, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (A, H, W) Tensor-4.png</small>
                 
               </div>
             </div>
@@ -555,9 +381,183 @@
         </div>
         
         <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
-          <div class="col-12">
-            <p class="h4">[BRANCH 4] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W) Tensor</p>
+          <div class="col-12 ps-2 mb-1 mt-4 pb-1">
+            <p class="h5">[BRANCH 3] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor</p>
             <span class="text-muted">Random Inputs: {'size_matching_method': 'crop_larger_topleft', 'invert_cutout': False}</span>
+          </div>
+          <div class="col-12 d-flex flex-row">
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-1.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">base_image</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  RGBHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([3, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-1.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 3] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-1.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-2.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">cutout</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  RGBHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([3, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-2.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 3] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-2.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-3.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">cutout_alpha</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  AHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([1, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-3.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 3] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-3.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-4.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">Output</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  RGBHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([3, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 3] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-4.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 3] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-4.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+        
+        <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
+          <div class="col-12 ps-2 mb-1 mt-4 pb-1">
+            <p class="h5">[BRANCH 4] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W) Tensor</p>
+            <span class="text-muted">Random Inputs: {'size_matching_method': 'cover_crop', 'invert_cutout': True}</span>
           </div>
           <div class="col-12 d-flex flex-row">
           
@@ -729,16 +729,16 @@
         </div>
         
         <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
-          <div class="col-12">
-            <p class="h4">[BRANCH 5] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor</p>
-            <span class="text-muted">Random Inputs: {'size_matching_method': 'fill', 'invert_cutout': False}</span>
+          <div class="col-12 ps-2 mb-1 mt-4 pb-1">
+            <p class="h5">[BRANCH 5] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor</p>
+            <span class="text-muted">Random Inputs: {'size_matching_method': 'cover_crop', 'invert_cutout': True}</span>
           </div>
           <div class="col-12 d-flex flex-row">
           
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-1.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-1.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -750,12 +750,12 @@
                 <p class="card-text">
                   <span class="text-muted">TENSOR TYPE&nbsp;</span>
 
-                  RGBHW
+                  RGBAHW
                 </p>
                 <p class="card-text">
                   <span class="text-muted">TENSOR SHAPE&nbsp;</span>
 
-                  torch.Size([3, 24, 34])
+                  torch.Size([4, 24, 34])
                 </p>
                 <p class="card-text">
                   <span class="text-muted">HEIGHT&nbsp;</span>
@@ -764,13 +764,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-1.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-1.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 5] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-1.png</small>
+                <small class="text-muted">[BRANCH 5] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-1.png</small>
                 
               </div>
             </div>
@@ -779,7 +779,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-2.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-2.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -791,12 +791,12 @@
                 <p class="card-text">
                   <span class="text-muted">TENSOR TYPE&nbsp;</span>
 
-                  RGBHW
+                  RGBAHW
                 </p>
                 <p class="card-text">
                   <span class="text-muted">TENSOR SHAPE&nbsp;</span>
 
-                  torch.Size([3, 24, 34])
+                  torch.Size([4, 24, 34])
                 </p>
                 <p class="card-text">
                   <span class="text-muted">HEIGHT&nbsp;</span>
@@ -805,13 +805,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-2.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-2.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 5] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-2.png</small>
+                <small class="text-muted">[BRANCH 5] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-2.png</small>
                 
               </div>
             </div>
@@ -820,7 +820,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-3.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-3.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -846,13 +846,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-3.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-3.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 5] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-3.png</small>
+                <small class="text-muted">[BRANCH 5] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-3.png</small>
                 
               </div>
             </div>
@@ -861,7 +861,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-4.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-4.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -887,13 +887,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-4.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 5] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-4.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 5] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-4.png</small>
+                <small class="text-muted">[BRANCH 5] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-4.png</small>
                 
               </div>
             </div>
@@ -903,8 +903,356 @@
         </div>
         
         <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
-          <div class="col-12">
-            <p class="h4">[BRANCH 6] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor</p>
+          <div class="col-12 ps-2 mb-1 mt-4 pb-1">
+            <p class="h5">[BRANCH 6] image1: (RGB, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor</p>
+            <span class="text-muted">Random Inputs: {'size_matching_method': 'crop_larger_topleft', 'invert_cutout': False}</span>
+          </div>
+          <div class="col-12 d-flex flex-row">
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (RGB, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-1.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">base_image</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  RGBHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([3, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (RGB, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-1.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 6] image1: (RGB, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-1.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (RGB, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-2.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">cutout</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  RGBAHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([4, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (RGB, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-2.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 6] image1: (RGB, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-2.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (RGB, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-3.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">cutout_alpha</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  AHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([1, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (RGB, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-3.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 6] image1: (RGB, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-3.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (RGB, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-4.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">Output</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  RGBHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([3, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (RGB, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-4.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 6] image1: (RGB, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (H, W, A) Tensor-4.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+        
+        <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
+          <div class="col-12 ps-2 mb-1 mt-4 pb-1">
+            <p class="h5">[BRANCH 7] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor</p>
+            <span class="text-muted">Random Inputs: {'size_matching_method': 'cover_crop', 'invert_cutout': False}</span>
+          </div>
+          <div class="col-12 d-flex flex-row">
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-1.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">base_image</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  RGBHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([3, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-1.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 7] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-1.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-2.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">cutout</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  RGBAHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([4, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-2.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 7] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-2.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-3.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">cutout_alpha</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  AHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([1, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-3.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 7] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-3.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-4.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">Output</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  RGBHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([3, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-4.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 7] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-4.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+        
+        <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
+          <div class="col-12 ps-2 mb-1 mt-4 pb-1">
+            <p class="h5">[BRANCH 8] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor</p>
             <span class="text-muted">Random Inputs: {'size_matching_method': 'cover_crop_center', 'invert_cutout': False}</span>
           </div>
           <div class="col-12 d-flex flex-row">
@@ -912,54 +1260,13 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-1.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-1.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
               />
               <div class="card-body">
                 <h5 class="card-title">base_image</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
-                  RGBHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([3, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-1.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 6] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-1.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-2.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">cutout</h5>
                 <p class="card-text"></p>
 
                 <p class="card-text">
@@ -979,13 +1286,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-2.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-1.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 6] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-2.png</small>
+                <small class="text-muted">[BRANCH 8] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-1.png</small>
                 
               </div>
             </div>
@@ -994,7 +1301,48 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-3.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-2.png"
+                class="card-img-top img-fluid"
+                alt=""
+                title=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">cutout</h5>
+                <p class="card-text"></p>
+
+                <p class="card-text">
+                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
+
+                  RGBHW
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
+
+                  torch.Size([3, 24, 34])
+                </p>
+                <p class="card-text">
+                  <span class="text-muted">HEIGHT&nbsp;</span>
+                  <strong> 24 </strong>
+                  &nbsp;&nbsp;
+                  <span class="text-muted">WIDTH&nbsp;</span>
+                  <strong> 34 </strong>
+                </p>
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-2.png" class="btn btn-primary"
+                  >OPEN IMG FILE</a
+                >
+              </div>
+
+              <div class="card-footer">
+                <small class="text-muted">[BRANCH 8] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-2.png</small>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card p-3 h-100">
+              <img
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-3.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -1020,13 +1368,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-3.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-3.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 6] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-3.png</small>
+                <small class="text-muted">[BRANCH 8] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-3.png</small>
                 
               </div>
             </div>
@@ -1035,7 +1383,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-4.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-4.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -1061,13 +1409,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 6] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-4.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-4.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 6] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W) Tensor-4.png</small>
+                <small class="text-muted">[BRANCH 8] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-4.png</small>
                 
               </div>
             </div>
@@ -1077,145 +1425,22 @@
         </div>
         
         <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
-          <div class="col-12">
-            <p class="h4">[BRANCH 7] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor</p>
-            <span class="text-muted">Random Inputs: {'size_matching_method': 'crop_larger_topleft', 'invert_cutout': True}</span>
+          <div class="col-12 ps-2 mb-1 mt-4 pb-1">
+            <p class="h5">[BRANCH 9] image1: (RGB, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W) Tensor</p>
+            <span class="text-muted">Random Inputs: {'size_matching_method': 'crop_larger_center', 'invert_cutout': True}</span>
           </div>
           <div class="col-12 d-flex flex-row">
           
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-1.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGB, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W) Tensor-1.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
               />
               <div class="card-body">
                 <h5 class="card-title">base_image</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
-                  RGBAHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([4, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-1.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 7] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-1.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-2.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">cutout</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
-                  RGBAHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([4, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-2.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 7] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-2.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-3.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">cutout_alpha</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
-                  AHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([1, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-3.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 7] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-3.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-4.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">Output</h5>
                 <p class="card-text"></p>
 
                 <p class="card-text">
@@ -1235,64 +1460,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 7] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-4.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGB, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W) Tensor-1.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 7] image1: (RGBA, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-4.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          </div>
-        </div>
-        
-        <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
-          <div class="col-12">
-            <p class="h4">[BRANCH 8] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor</p>
-            <span class="text-muted">Random Inputs: {'size_matching_method': 'crop_larger_center', 'invert_cutout': False}</span>
-          </div>
-          <div class="col-12 d-flex flex-row">
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-1.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">base_image</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
-                  RGBAHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([4, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-1.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 8] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-1.png</small>
+                <small class="text-muted">[BRANCH 9] image1: (RGB, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W) Tensor-1.png</small>
                 
               </div>
             </div>
@@ -1301,7 +1475,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-2.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGB, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W) Tensor-2.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -1327,13 +1501,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-2.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGB, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W) Tensor-2.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 8] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-2.png</small>
+                <small class="text-muted">[BRANCH 9] image1: (RGB, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W) Tensor-2.png</small>
                 
               </div>
             </div>
@@ -1342,7 +1516,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-3.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGB, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W) Tensor-3.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -1368,13 +1542,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-3.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGB, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W) Tensor-3.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 8] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-3.png</small>
+                <small class="text-muted">[BRANCH 9] image1: (RGB, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W) Tensor-3.png</small>
                 
               </div>
             </div>
@@ -1383,7 +1557,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-4.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGB, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W) Tensor-4.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -1409,13 +1583,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 8] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-4.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGB, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W) Tensor-4.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 8] image1: (RGBA, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (A, H, W) Tensor-4.png</small>
+                <small class="text-muted">[BRANCH 9] image1: (RGB, H, W) Tensor | image2: (H, W, RGB) Tensor | image3: (H, W) Tensor-4.png</small>
                 
               </div>
             </div>
@@ -1425,182 +1599,8 @@
         </div>
         
         <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
-          <div class="col-12">
-            <p class="h4">[BRANCH 9] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (A, H, W) Tensor</p>
-            <span class="text-muted">Random Inputs: {'size_matching_method': 'fit_center', 'invert_cutout': True}</span>
-          </div>
-          <div class="col-12 d-flex flex-row">
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (A, H, W) Tensor-1.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">base_image</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
-                  RGBAHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([4, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (A, H, W) Tensor-1.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 9] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (A, H, W) Tensor-1.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (A, H, W) Tensor-2.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">cutout</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
-                  RGBAHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([4, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (A, H, W) Tensor-2.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 9] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (A, H, W) Tensor-2.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (A, H, W) Tensor-3.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">cutout_alpha</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
-                  AHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([1, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (A, H, W) Tensor-3.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 9] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (A, H, W) Tensor-3.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          <div class="col">
-            <div class="card p-3 h-100">
-              <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (A, H, W) Tensor-4.png"
-                class="card-img-top img-fluid"
-                alt=""
-                title=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">Output</h5>
-                <p class="card-text"></p>
-
-                <p class="card-text">
-                  <span class="text-muted">TENSOR TYPE&nbsp;</span>
-
-                  RGBHW
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">TENSOR SHAPE&nbsp;</span>
-
-                  torch.Size([3, 24, 34])
-                </p>
-                <p class="card-text">
-                  <span class="text-muted">HEIGHT&nbsp;</span>
-                  <strong> 24 </strong>
-                  &nbsp;&nbsp;
-                  <span class="text-muted">WIDTH&nbsp;</span>
-                  <strong> 34 </strong>
-                </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 9] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (A, H, W) Tensor-4.png" class="btn btn-primary"
-                  >OPEN IMG FILE</a
-                >
-              </div>
-
-              <div class="card-footer">
-                <small class="text-muted">[BRANCH 9] image1: (RGBA, H, W) Tensor | image2: (H, W, RGBA) Tensor | image3: (A, H, W) Tensor-4.png</small>
-                
-              </div>
-            </div>
-          </div>
-          
-          </div>
-        </div>
-        
-        <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
-          <div class="col-12">
-            <p class="h4">[BRANCH 10] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor</p>
+          <div class="col-12 ps-2 mb-1 mt-4 pb-1">
+            <p class="h5">[BRANCH 10] image1: (H, W, RGBA) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor</p>
             <span class="text-muted">Random Inputs: {'size_matching_method': 'crop_larger_topleft', 'invert_cutout': False}</span>
           </div>
           <div class="col-12 d-flex flex-row">
@@ -1773,16 +1773,16 @@
         </div>
         
         <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
-          <div class="col-12">
-            <p class="h4">[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor</p>
-            <span class="text-muted">Random Inputs: {'size_matching_method': 'center_dont_resize', 'invert_cutout': True}</span>
+          <div class="col-12 ps-2 mb-1 mt-4 pb-1">
+            <p class="h5">[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor</p>
+            <span class="text-muted">Random Inputs: {'size_matching_method': 'crop_larger_topleft', 'invert_cutout': True}</span>
           </div>
           <div class="col-12 d-flex flex-row">
           
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-1.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-1.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -1808,13 +1808,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-1.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-1.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-1.png</small>
+                <small class="text-muted">[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-1.png</small>
                 
               </div>
             </div>
@@ -1823,7 +1823,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-2.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-2.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -1835,12 +1835,12 @@
                 <p class="card-text">
                   <span class="text-muted">TENSOR TYPE&nbsp;</span>
 
-                  RGBAHW
+                  RGBHW
                 </p>
                 <p class="card-text">
                   <span class="text-muted">TENSOR SHAPE&nbsp;</span>
 
-                  torch.Size([4, 24, 34])
+                  torch.Size([3, 24, 34])
                 </p>
                 <p class="card-text">
                   <span class="text-muted">HEIGHT&nbsp;</span>
@@ -1849,13 +1849,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-2.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-2.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-2.png</small>
+                <small class="text-muted">[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-2.png</small>
                 
               </div>
             </div>
@@ -1864,7 +1864,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-3.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-3.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -1890,13 +1890,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-3.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-3.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-3.png</small>
+                <small class="text-muted">[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-3.png</small>
                 
               </div>
             </div>
@@ -1905,7 +1905,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-4.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-4.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -1931,13 +1931,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-4.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-4.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGBA, H, W) Tensor | image3: (H, W, A) Tensor-4.png</small>
+                <small class="text-muted">[BRANCH 11] image1: (H, W, RGB) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W) Tensor-4.png</small>
                 
               </div>
             </div>
@@ -1947,16 +1947,16 @@
         </div>
         
         <div class="col-xl-12 col-xxl-6 mb-3 d-flex container-fluid flex-column">
-          <div class="col-12">
-            <p class="h4">[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor</p>
-            <span class="text-muted">Random Inputs: {'size_matching_method': 'center_dont_resize', 'invert_cutout': True}</span>
+          <div class="col-12 ps-2 mb-1 mt-4 pb-1">
+            <p class="h5">[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor</p>
+            <span class="text-muted">Random Inputs: {'size_matching_method': 'crop_larger_topleft', 'invert_cutout': True}</span>
           </div>
           <div class="col-12 d-flex flex-row">
           
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-1.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-1.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -1982,13 +1982,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-1.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-1.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-1.png</small>
+                <small class="text-muted">[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-1.png</small>
                 
               </div>
             </div>
@@ -1997,7 +1997,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-2.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-2.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -2009,12 +2009,12 @@
                 <p class="card-text">
                   <span class="text-muted">TENSOR TYPE&nbsp;</span>
 
-                  RGBAHW
+                  RGBHW
                 </p>
                 <p class="card-text">
                   <span class="text-muted">TENSOR SHAPE&nbsp;</span>
 
-                  torch.Size([4, 24, 34])
+                  torch.Size([3, 24, 34])
                 </p>
                 <p class="card-text">
                   <span class="text-muted">HEIGHT&nbsp;</span>
@@ -2023,13 +2023,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-2.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-2.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-2.png</small>
+                <small class="text-muted">[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-2.png</small>
                 
               </div>
             </div>
@@ -2038,7 +2038,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-3.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-3.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -2064,13 +2064,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-3.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-3.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-3.png</small>
+                <small class="text-muted">[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-3.png</small>
                 
               </div>
             </div>
@@ -2079,7 +2079,7 @@
           <div class="col">
             <div class="card p-3 h-100">
               <img
-                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-4.png"
+                src="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-4.png"
                 class="card-img-top img-fluid"
                 alt=""
                 title=""
@@ -2105,13 +2105,13 @@
                   <span class="text-muted">WIDTH&nbsp;</span>
                   <strong> 34 </strong>
                 </p>
-                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-4.png" class="btn btn-primary"
+                <a href="/home/c_byrne/projects/comfy-node-testing-tools/src/view_results/test-results/[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-4.png" class="btn btn-primary"
                   >OPEN IMG FILE</a
                 >
               </div>
 
               <div class="card-footer">
-                <small class="text-muted">[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGBA, H, W) Tensor | image3: (A, H, W) Tensor-4.png</small>
+                <small class="text-muted">[BRANCH 12] image1: (RGB, H, W) Tensor | image2: (RGB, H, W) Tensor | image3: (H, W, A) Tensor-4.png</small>
                 
               </div>
             </div>

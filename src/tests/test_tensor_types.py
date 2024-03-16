@@ -9,88 +9,97 @@ from src.utils.comfy_utils import call_node, random_inputs
 
 
 class TensorTypesTest:
-    def __init__(self, node, tensor_fields: list[(str, str)], INPUT_TYPES, max_branches):
+    def __init__(self, node, tensor_fields: list[(str, str)], INPUT_TYPES):
+        self.node = node
         self.tensor_fields = tensor_fields
         self.INPUT_TYPES = INPUT_TYPES
         self.tensor_fields_types = [field[1] for field in tensor_fields]
         self.tensor_fields_names = [field[0] for field in tensor_fields]
-        self.max_branches = max_branches
         self.title = "Tensor Types Permutations"
 
+    def run(self, max_branches=40):
         self.branches = BranchGenerator().gen_branches_tensor_types(
-            self.tensor_fields_types, max_branches=self.max_branches
+            self.tensor_fields_types, max_branches=max_branches
         )
-        results_webview = ComparisonGrid(self.title)
-
+        self.results = ComparisonGrid(self.title)
         smart_print(f"Testing: {self.title}")
 
-        for branch_descrip, branch in self.branches.items():
+        for branch_description, branch in self.branches.items():
+            self.__test_branch(branch_description, branch)
 
-            kwargs = {}
-            failure_msg = [f"{branch_descrip}\n"]
-            for field_config, branch_field in zip(self.tensor_fields, branch):
-                field_ui_name = field_config[0]
-                smart_print(f"field_ui_name: {field_ui_name}")
-                field_type = field_config[1]
-                smart_print(f"field_type: {field_type}")
-                field_input_tensor = branch_field["tensor_image"]
+        self.results.show_webview()
 
-                results_webview.add(
-                    branch_descrip,
-                    field_ui_name,
-                    TensorImgUtils.convert_to_type(field_input_tensor, "CHW"),
-                )
+    def __test_branch(self, branch_name: str, branch: dict):
+        inputs = self.__get_branch_inputs(branch_name, branch)
+        error_msg = self.__get_branch_error_msg(branch_name, branch, inputs)
 
-                kwargs[field_ui_name] = field_input_tensor
-                failure_msg.append(
-                    f"({field_type}) {field_ui_name}: {field_input_tensor.shape}"
-                )
-            failure_msg = ", ".join(failure_msg)
-
-            random_kwargs = random_inputs(self.INPUT_TYPES, self.tensor_fields_names)
-            kwargs.update(random_kwargs)
-            results_webview.append_to_section_descripttion(
-                branch_descrip, f"Random Inputs: {random_kwargs}"
-            )
-
-            try:
-                output = call_node(node, kwargs)
-            except Exception as e:
-                print(failure_msg)
-                print(f"\nError: {e}")
-                continue
-
+        try:
+            output = call_node(self.node, inputs)
             assert (
                 TensorImgUtils.identify_type(output)[1] == "BHWRGB"
-            ), f"Wrong Tensor Type Returned — {failure_msg}"
+            ), "Wrong Tensor Type Returned"
+        except Exception as e:
+            print(error_msg)
+            print(f"\nError: {e}")
+            return
 
-            output = TensorImgUtils.convert_to_type(output, "CHW")
-            print(f"output shape: {output.shape}")
+        output = TensorImgUtils.convert_to_type(output, "CHW")
+        self.__add_output_to_results(branch_name, output)
 
-            if isinstance(output, tuple) or isinstance(output, list):
-                i = 0
-                while i < len(output):
-                    return_item = output[i]
-                    print(f"return item type: {type(return_item)}")
-                    if not isinstance(return_item, torch.Tensor):
-                        print(f"return item shape: {return_item.shape}")
-                        i += 1
-                        continue
-
-                    results_webview.add(
-                        branch_descrip,
-                        "Output",
-                        TensorImgUtils.convert_to_type(return_item, "CHW"),
-                    )
+    def __add_output_to_results(self, branch_name: str, output: any):
+        if isinstance(output, tuple) or isinstance(output, list):
+            i = 0
+            while i < len(output):
+                return_item = output[i]
+                if not isinstance(return_item, torch.Tensor):
                     i += 1
-            else:
-                results_webview.add(
-                    branch_descrip,
-                    "Output",
-                    TensorImgUtils.convert_to_type(output, "CHW"),
-                )
+                    continue
 
-        results_webview.show_webview()
+                self.results.add(
+                    branch_name,
+                    "Output",
+                    TensorImgUtils.convert_to_type(return_item, "CHW"),
+                )
+                i += 1
+        else:
+            self.results.add(
+                branch_name,
+                "Output",
+                TensorImgUtils.convert_to_type(output, "CHW"),
+            )
+
+    def __get_branch_error_msg(
+        self, branch_name: str, branch: dict, inputs: dict
+    ) -> str:
+        failure_msg = [f"{branch_name}\n"]
+        for field_config, branch_field in zip(self.tensor_fields, branch):
+            failure_msg.append(
+                f"({field_config[1]}) {field_config[0]}: "
+                + f"{branch_field['tensor_image'].shape}"
+            )
+
+        failure_msg = ", ".join(failure_msg) + "\n" + f"Random Inputs Used:\n{inputs}"
+        return failure_msg
+
+    def __get_branch_inputs(self, branch_name: str, branch: dict) -> dict:
+        kwargs = {}
+        for field_config, branch_field in zip(self.tensor_fields, branch):
+            field_ui_name = field_config[0]
+            field_input_tensor = branch_field["tensor_image"]
+            kwargs[field_ui_name] = field_input_tensor
+            self.results.add(
+                branch_name,
+                field_ui_name,
+                TensorImgUtils.convert_to_type(field_input_tensor, "CHW"),
+            )
+
+        random_kwargs = random_inputs(self.INPUT_TYPES, self.tensor_fields_names)
+        kwargs.update(random_kwargs)
+        self.results.append_to_section_description(
+            branch_name, f"Random Inputs: {random_kwargs}"
+        )
+
+        return kwargs
 
     def __mask_from(self, img: torch.Tensor) -> torch.Tensor:
         """Try to extract the alpha layer from the image. If it doesn't exist,
