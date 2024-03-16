@@ -12,18 +12,10 @@ import sys
 from itertools import permutations, product
 from termcolor import colored
 
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-from utils.tensor_utils import TensorImgUtils
-from test.test_tools_constants import (
-    ORDER_STRINGS,
-    COLOR_ORDERS,
-    EDGE_CASE_PIXELS,
-    VERBOSE,
-    ALLOW_REPEAT_BRANCHES,
-)
-from utils.logger import _log
-from types_interfaces.image_tensor_types import ImageTensorTypes as itt
-
+from src.utils.tensor_utils import TensorImgUtils
+from src.constants import * 
+from src.utils.logger import _log
+from src.types_interfaces.image_tensor_types import ImageTensorTypes as itt
 
 class BranchGenerator:
     def __init__(self):
@@ -275,6 +267,7 @@ class BranchGenerator:
         self,
         arg_types: list[str],
         batch_dimension=False,
+        max_branches=40,
     ):
         """
 
@@ -282,10 +275,9 @@ class BranchGenerator:
         Args:
             arg_types (list[str]): A tuple describing each argument type for the class being tested. Valid types are "image", and "mask". For example, if the class takes an image and a mask, the tuple would be ("image", "mask").
         """
-        valid_arg_types = ["image", "mask"]
-        if not all([arg in valid_arg_types for arg in arg_types]):
+        if not all([arg in TENSOR_FIELDS for arg in arg_types]):
             raise ValueError(
-                f"Invalid arg_types. Must be a list containing only items from: {valid_arg_types}."
+                f"Invalid arg_types. Must be a list containing only items from: {TENSOR_FIELDS}."
             )
 
         b = 1
@@ -359,20 +351,25 @@ class BranchGenerator:
             image_types += batch_types
 
         coord_ranges = [
-            len(mask_types) if arg == "mask" else len(image_types) for arg in arg_types
+            len(mask_types) if arg == "MASK" else len(image_types) for arg in arg_types
         ]
         ranges = [range(i) for i in coord_ranges]
         permutations = list(product(*ranges))
 
         self.__log(f"[TENSOR TYPES] Total Permutations: {len(permutations)}")
+        if len(permutations) > max_branches:
+            self.__log(
+                f"[TENSOR TYPES] Total branches exceeds max allowed branches ({max_branches}), using {max_branches} random branches instead."
+            )
+            permutations = random.sample(permutations, max_branches)
         branches = {}
         for perm_index, perm in enumerate(permutations):
             tensor_descriptions = []
             branch = []
             for tensor_index in range(len(arg_types)):
-                if arg_types[tensor_index] == "mask":
+                if arg_types[tensor_index] == "MASK":
                     tensor = mask_types[perm[tensor_index]]
-                elif arg_types[tensor_index] == "image":
+                elif arg_types[tensor_index] == "IMAGE":
                     tensor = image_types[perm[tensor_index]]
 
                 branch.append(tensor)

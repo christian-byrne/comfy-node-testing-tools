@@ -4,14 +4,11 @@ import random
 import torch
 import torchvision.transforms as transforms
 from moviepy.editor import VideoFileClip
-import sys
 from termcolor import colored
 
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-from constants import VIDEO_EXTENSION_LIST, PICTURE_EXTENSION_LIST
-from test.test_tools_constants import *
-from types_interfaces.image_tensor_types import ImageTensorTypes as itt
-from utils.logger import _log
+from src.constants import *
+from src.types_interfaces.image_tensor_types import ImageTensorTypes as itt
+from src.utils.logger import _log
 
 
 class TestImages:
@@ -37,7 +34,7 @@ class TestImages:
         self.to_tensor = transforms.ToTensor()
 
     def __log(self, *args):
-        if VERBOSE: 
+        if VERBOSE:
             _log("Test Images", *args)
 
     def set_max_dimensions(self, width: int, height: int):

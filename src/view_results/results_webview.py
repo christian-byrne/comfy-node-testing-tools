@@ -1,19 +1,17 @@
-import sys
 import os
 import subprocess
 import shutil
 from jinja2 import Environment, FileSystemLoader
 from torchvision import transforms
 from PIL import Image
-from typing import List, Tuple
 import torch
-from PIL import Image, ImageDraw
 from torchvision import transforms
-import time
 import math
 from typing import List, Tuple
-from utils.tensor_utils import TensorImgUtils
-from utils.os_utils import OS_Utils
+
+from src.utils.tensor_utils import TensorImgUtils
+from src.utils.os_utils import OS_Utils
+from src.utils.logger import _log
 
 
 class ComparisonGrid:
@@ -30,9 +28,17 @@ class ComparisonGrid:
         self.all_widths = []
         self.all_heights = []
 
-        self.dir_abs_path = os.path.dirname(os.path.abspath(__file__))
-        self.results_dir = os.path.join(self.dir_abs_path, "test-results")
-        self.templates_dir = os.path.join(self.dir_abs_path, "web-templates")
+        module_name = "comfy-node-testing-tools"
+        this_dir_path = os.path.dirname(os.path.abspath(__file__))
+        repo_root = os.path.join(
+            this_dir_path.split(
+                module_name
+            )[0],
+            module_name,
+        )
+        self.results_dir = os.path.join(this_dir_path, "test-results")
+        self.templates_dir = os.path.join(repo_root, "web-templates")
+
         self.__prep_dirs()
         self.to_pil = transforms.ToPILImage()
 
@@ -54,10 +60,24 @@ class ComparisonGrid:
             (106, 76, 147),
         ]
 
+    def __log(self, *args):
+        _log("RESULTS VIEWER", *args)
+
     def __prep_dirs(self):
         if os.path.exists(self.results_dir):
             shutil.rmtree(self.results_dir)
         os.makedirs(self.results_dir, exist_ok=True)
+
+    def append_to_section_descripttion(self, section_name: str, description: str):
+        if section_name not in self.sections:
+            self.__log(f"Section {section_name} does not exist.")
+            return
+        
+        if "description" not in self.sections[section_name]:
+            self.sections[section_name]["description"] = description
+        else:
+            self.sections[section_name]["description"] += description
+
 
     def add(self, section_name: str, caption: str, img: torch.Tensor):
         if section_name not in self.sections:
@@ -70,9 +90,7 @@ class ComparisonGrid:
             ]
 
         self.sections[section_name]["caption"] = caption
-        pil_img = self.to_pil(
-            TensorImgUtils.convert_to_type(img, "CHW")
-        )
+        pil_img = self.to_pil(TensorImgUtils.convert_to_type(img, "CHW"))
         img_index = len(self.sections[section_name]["images"]) + 1
         filename = f"{section_name}-{img_index}.png"
 
@@ -85,8 +103,8 @@ class ComparisonGrid:
             "filename": filename,
             "height": pil_img.height,
             "width": pil_img.width,
-            "tensor_shape" : img.shape,
-            "tensor_format" : TensorImgUtils.identify_type(img)[1],
+            "tensor_shape": img.shape,
+            "tensor_format": TensorImgUtils.identify_type(img)[1],
             "metadata": str(pil_img.info) if pil_img.info else "",
         }
         self.sections[section_name]["images"].append(img_dict)
@@ -94,8 +112,7 @@ class ComparisonGrid:
         self.all_widths.append(pil_img.width)
 
     def show_webview(self):
-        print("\nShowing test results with option: webview")
-        print("Normalizing images. Relative differences will still be visualized.\n")
+        self.__log("Showing test results with option: webview")
         self.__save_normalized_images()
         env = Environment(loader=FileSystemLoader(self.templates_dir))
         template = env.get_template("test_results_template.html")

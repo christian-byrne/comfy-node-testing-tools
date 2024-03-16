@@ -43,11 +43,11 @@ class TensorImgUtils:
         if dim_n == 2:
             return (["H", "W"], "HW")
         elif dim_n == 3:  # HWA, AHW, HWC, or CHW
-            if tensor.size(0) == tensor.size(1) == tensor.size(2):  # HWA or AHW
-                if tensor.size(2) == 1:
-                    return (["H", "W", "C"], "HWA")
-                else:
-                    return (["C", "H", "W"], "AHW")
+            # if tensor.size(0) == tensor.size(1) == tensor.size(2):  # HWA or AHW
+            if tensor.size(2) == 1:
+                return (["H", "W", "C"], "HWA")
+            elif tensor.size(0) == 1:
+                return (["C", "H", "W"], "AHW")
             else:  # HWC or CHW
                 if tensor.size(2) == 3:
                     return (["H", "W", "C"], "HWRGB")

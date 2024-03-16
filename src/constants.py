@@ -1,5 +1,23 @@
+# User Inputs:
+TARGET_CUSTOM_NODES_DIR = (
+    "/home/c_byrne/tools/sd/sd-interfaces/ComfyUI/custom_nodes/elimination-nodes"
+)
+TARGET_NODE_CLASS_NAME = "Composite Alpha Layer | Elimination Nodes"
+# Set the max branches for each test class to prevent situations where there could technically be hundreds of branches to test. Will try to select the most relevant branches to test when truncating.
+MAX_BRANCHES = 12
+# If the node being tested accepts a MODEL input field, set the model name how it appears in the LoadCheckpoint selection dropdown, most likely without a path
+USE_MODEL = "Stable-diffusion/vibrant/dreamshaper_8.safetensors"
+
+
+# --------------------
+TENSOR_FIELDS = [
+    "IMAGE",
+    "MASK",
+    "LATENT",
+    "IMAGES",
+]
 EDGE_CASE_PIXELS = 1
-VERBOSE = False
+VERBOSE = True
 ALLOW_REPEAT_BRANCHES = True
 COLOR_ORDERS = [
     "light_red",

@@ -4,14 +4,30 @@ import importlib.util
 import logging
 import traceback
 import time
-import utils.folder_paths as folder_paths
 import argparse
+import random
+
+import unittest
+import torch
+import os
+import sys
+from torchvision import transforms
+
+from src.utils import folder_paths
+from src.view_results.results_webview import ComparisonGrid
+from src.utils.tensor_utils import TensorImgUtils
+
+from src.tests.test_tensor_types import TensorTypesTest
+from src.constants import MAX_BRANCHES, TARGET_CUSTOM_NODES_DIR, TARGET_NODE_CLASS_NAME
 
 
 class NodeTest:
-    def __init__(self, target_node_dir: str, target_node_classname: str):
+    def __init__(
+        self, target_node_dir: str, target_node_classname: str, max_branches=40
+    ):
         self.node_path = target_node_dir
         self.node_name = target_node_classname
+        self.max_branches = max_branches
 
         self.NODE_CLASS_MAPPINGS = {}
         self.NODE_DISPLAY_NAME_MAPPINGS = {}
@@ -25,7 +41,37 @@ class NodeTest:
             "instance": self.NODE_CLASS_MAPPINGS[self.node_name](),
             "input_types": self.NODE_CLASS_MAPPINGS[self.node_name].INPUT_TYPES(),
         }
-        print(f"Target Node Input Types:\n{self.target_node['input_types']}")
+        print(f"Target Node Input Types: {self.target_node['input_types']}")
+        self.target_node["tensor_input_fields"] = self.parse_tensor_input_fields(
+            self.target_node["input_types"]
+        )
+        print(
+            f"Target Node Tensor Input Fields: {self.target_node['tensor_input_fields']}"
+        )
+
+        tensor_test = TensorTypesTest(
+            self.target_node["instance"],
+            self.target_node["tensor_input_fields"],
+            self.target_node["input_types"],
+            max_branches=self.max_branches,
+        )
+
+    def parse_tensor_input_fields(self, INPUT_TYPES):
+        """Parse the input types for the node
+
+        Example shape of INPUT_TYPES:
+        Inputs: {'required': {'base_image': ('IMAGE',), 'cutout': ('IMAGE',), 'cutout_alpha': ('MASK',), 'size_matching_method': (['cover_crop_center', 'cover_crop', 'center_dont_resize', 'fill', 'fit_center', 'crop_larger_center', 'crop_larger_topleft'],), 'invert_cutout': ('BOOLEAN', {'default': False, 'label_on': 'enabled', 'label_off': 'disabled'})}}
+        """
+        match_keys = ["IMAGE", "MASK", "LATENT", "IMAGES"]
+        input_fields = []
+
+        for category in INPUT_TYPES.values():
+            for field_ui_name, field_config in category.items():
+                if field_config[0] in match_keys:
+                    input_fields.append((field_ui_name, field_config[0]))
+
+        print(f"Input Fields: {input_fields}")
+        return input_fields
 
     def load_custom_node(self, ignore=set()):
         """From: https://github.com/comfyanonymous/ComfyUI/blob/f2fe635c9f56a8e78866f59b3f110585e75b42f4/nodes.py#L1873C1-L1874C1"""
@@ -90,9 +136,5 @@ class NodeTest:
 
 
 if __name__ == "__main__":
-    TARGET_CUSTOM_NODES_DIR = (
-        "/home/c_byrne/tools/sd/sd-interfaces/ComfyUI/custom_nodes/elimination-nodes"
-    )
-    TARGET_NODE_CLASS_NAME = "Composite Alpha Layer | Elimination Nodes"
-    NodeTest(TARGET_CUSTOM_NODES_DIR, TARGET_NODE_CLASS_NAME)
+    NodeTest(TARGET_CUSTOM_NODES_DIR, TARGET_NODE_CLASS_NAME, MAX_BRANCHES)
     # NodeTest("composite_alpha_to_base_node", PATH_TO_CUSTOM_NODE)
