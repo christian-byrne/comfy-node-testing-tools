@@ -263,7 +263,9 @@ class BranchGenerator:
             self.__log(
                 f"[IMG SIZES] Total branches still exceeds max allowed branches ({max_branches}) after filtering to core branches, selecting {max_branches} random branches from sample."
             )
-            branches = dict(random.sample(branches.items(), max_branches))
+            # branches = dict(random.sample(branches.items(), max_branches))
+            # Choose first n branches instead of random
+            branches = dict(list(branches.items())[:max_branches])
         return branches
 
     def gen_branches_tensor_types(

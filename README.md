@@ -3,9 +3,8 @@
 - [Overview](#overview)
 - [Purposes](#purposes)
 - [Test Types](#test-types)
-    - [Tensor Format/Type Permutations](#tensor-formattype-permutations)
     - [Image Size Permutations](#image-size-permutations)
-- [Demo](#demo)
+    - [Tensor Format/Type Permutations](#tensor-formattype-permutations)
 
 &nbsp;
 
@@ -51,16 +50,21 @@
 
 # Test Types
 
+### Image Size Permutations
+
+![test-results-webview-picture-img_sizes_types](wiki/wiki-media/test-results-webview-picture-img_sizes_types.png)
+
+<!-- ![test-results-webview-picture-img_sizes_types-max](wiki/wiki-media/test-results-webview-picture-img_sizes_types-max.png)
+
+700+ branches in <2 seconds -->
 
 ### Tensor Format/Type Permutations
 
 ![test-results-webview-picture-tensor_types.png](wiki/wiki-media/test-results-webview-picture-tensor_types.png)
 
-### Image Size Permutations
 
-
-# Demo
+<!-- # Demo
 
 ![test suite webview demo gif](wiki/wiki-media/test-results-webview-gif2.gif)
 
-![test suite webview screenshot](wiki/wiki-media/test-results-webview-picture.png)
+![test suite webview screenshot](wiki/wiki-media/test-results-webview-picture.png) -->
