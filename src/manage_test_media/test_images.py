@@ -12,10 +12,17 @@ from src.utils.logger import _log
 
 
 class TestImages:
-    def __init__(self, max_width=224, max_height=224):
-        self.repo_root = os.path.dirname(os.path.dirname(__file__))
-        self.path = os.path.join(self.repo_root, "test")
-        self.img_dir = os.path.join(self.path, "test-images")
+    def __init__(self, max_width=224, max_height=224, verbose=VERBOSE):
+        self.verbose = verbose
+        module_name = "comfy-node-testing-tools"
+        this_dir_path = os.path.dirname(os.path.abspath(__file__))
+        self.repo_root = os.path.join(
+            this_dir_path.split(
+                module_name
+            )[0],
+            module_name,
+        )
+        self.img_dir = os.path.join(self.repo_root, "data/test-images")
 
         self.images = {}
         self.all_tags = set()
@@ -34,7 +41,7 @@ class TestImages:
         self.to_tensor = transforms.ToTensor()
 
     def __log(self, *args):
-        if VERBOSE:
+        if self.verbose:
             _log("Test Images", *args)
 
     def set_max_dimensions(self, width: int, height: int):

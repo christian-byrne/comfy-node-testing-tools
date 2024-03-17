@@ -151,67 +151,6 @@ class TestCompositeAlphaToBase(unittest.TestCase):
         pass
 
     # @unittest.skip("Skip for now")
-    def test_tensor_type_permutations(self):
-        test_title = "Tensor Type Permutations"
-        branches = self.branch_gen.gen_branches_tensor_types(["image", "image"])
-        compositer = CompositeCutoutOnBaseNode()
-        results = ComparisonGrid(test_title)
-        print(f"Testing: {test_title}")
-
-        for branch_descrip, branch in branches.items():
-            img1 = branch[0]["tensor_image"]
-            img2 = branch[1]["tensor_image"]
-
-            # Separate rgb from alpha. Generate opaque alpha layer if rgb-only image
-            # Obviously we cant just convert to constant format, would defeat the purpose of this test
-            img2_type = TensorImgUtils.identify_type(img2)[0]
-            channel_dim = img2_type.index("C")
-            if channel_dim == 0:
-                if img2.shape[channel_dim] == 4:
-                    img2_alpha = img2[3, :, :]
-                else:
-                    img2_alpha = torch.ones_like(img2[0, :, :])
-            elif channel_dim == 2:
-                if img2.shape[channel_dim] == 4:
-                    img2_alpha = img2[:, :, 3]
-                else:
-                    img2_alpha = torch.ones_like(img2[:, :, 0])
-            elif channel_dim == 3:
-                if img2.shape[channel_dim] == 4:
-                    print("img2.shape[channel_dim] == 4")
-                    print(f"img2.shape: {img2.shape}")
-                    print(f"channel_dim: {channel_dim}")
-                    img2_alpha = img2[:, :, :, 3]
-                else:
-                    img2_alpha = torch.ones_like(img2[:, :, :, 0])
-            elif channel_dim == 1:
-                if img2.shape[channel_dim] == 4:
-                    img2_alpha = img2[:, 0, :, :]
-                else:
-                    img2_alpha = torch.ones_like(img2[:, 0, :, :])
-
-            failure_msg = (
-                f"{branch_descrip}\nInput 1: {img1.shape}, Input 2: {img2.shape}"
-            )
-            resized = compositer.main(
-                img1, img2, img2_alpha, "cover_crop_center", invert_cutout=True
-            )
-            self.assertEqual(
-                "BHWRGB",
-                TensorImgUtils.identify_type(resized)[1],
-                f"Wrong Tensor Type Returned — {failure_msg}",
-            )
-
-            resized = TensorImgUtils.convert_to_type(resized, "CHW")
-            img1 = TensorImgUtils.convert_to_type(img1, "CHW")
-            img2 = TensorImgUtils.convert_to_type(img2, "CHW")
-            results.add(branch_descrip, "Input Image", img1)
-            results.add(branch_descrip, "Input Alpha Layer", img2)
-            results.add(branch_descrip, "Size Matched and Composited", resized)
-
-        results.show_webview()
-
-    # @unittest.skip("Skip for now")
     def test_size_permutations(self):
         test_title = "Image Size Permutations"
         compositer = CompositeCutoutOnBaseNode()

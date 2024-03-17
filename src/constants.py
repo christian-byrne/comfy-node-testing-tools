@@ -4,7 +4,7 @@ TARGET_CUSTOM_NODES_DIR = (
 )
 TARGET_NODE_CLASS_NAME = "Composite Alpha Layer | Elimination Nodes"
 # Set the max branches for each test class to prevent situations where there could technically be hundreds of branches to test. Will try to select the most relevant branches to test when truncating.
-MAX_BRANCHES = 12
+MAX_BRANCHES = 30
 # If the node being tested accepts a MODEL input field, set the model name how it appears in the LoadCheckpoint selection dropdown, most likely without a path
 USE_MODEL = "Stable-diffusion/vibrant/dreamshaper_8.safetensors"
 

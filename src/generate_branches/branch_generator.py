@@ -6,16 +6,14 @@ pyenv local 3.10.6
 import torch
 from torchvision import transforms
 from PIL import Image
-import os
 import random
-import sys
 from itertools import permutations, product
 from termcolor import colored
 
-from src.utils.tensor_utils import TensorImgUtils
-from src.constants import * 
+from src.constants import *
 from src.utils.logger import _log
 from src.types_interfaces.image_tensor_types import ImageTensorTypes as itt
+
 
 class BranchGenerator:
     def __init__(self):
@@ -261,6 +259,11 @@ class BranchGenerator:
                 if return_tensors:
                     branches[branch][img_index]["tensor_image"] = self.to_tensor(img)
 
+        if len(branches) > max_branches:
+            self.__log(
+                f"[IMG SIZES] Total branches still exceeds max allowed branches ({max_branches}) after filtering to core branches, selecting {max_branches} random branches from sample."
+            )
+            branches = dict(random.sample(branches.items(), max_branches))
         return branches
 
     def gen_branches_tensor_types(
